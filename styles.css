@@ -1,0 +1,40 @@
+body {
+    background-color: blue;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Logo_%281992-2001%29.svg/512px-Windows_Logo_%281992-2001%29.svg.png');
+}
+
+h1 {
+    color: red;
+    font-size: 4em;
+    margin-left: 5em;
+}
+
+.column {
+    float: left;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+.blinking {
+    -webkit-animation: blinking 1s infinite;  /* Safari 4+ */
+    -moz-animation: blinking 1s infinite;  /* Fx 5+ */
+    -o-animation: blinking 1s infinite;  /* Opera 12+ */
+    animation: blinking 1s infinite;  /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes blinking {
+    0%, 49% {
+        background-color: rgb(117, 209, 63);
+        border: 3px solid #e50000;
+    }
+    50%, 100% {
+        background-color: #e50000;
+        border: 3px solid rgb(117, 209, 63);
+    }
+}
